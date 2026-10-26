@@ -291,31 +291,6 @@ p {
   flex-wrap: wrap;
 }
 
-.hero-stats {
-  margin-top: 2.2rem;
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 1rem;
-}
-
-.hero-stats article {
-  background: linear-gradient(165deg, rgba(255, 255, 255, 0.06), rgba(255, 255, 255, 0.01));
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  border-radius: var(--radius);
-  padding: 1rem;
-}
-
-.hero-stats h2 {
-  font-size: 1.6rem;
-  color: var(--accent);
-}
-
-.hero-stats p {
-  margin: 0.25rem 0 0;
-  color: var(--muted);
-  font-size: 0.92rem;
-}
-
 .section {
   padding: 3.7rem 0;
 }
@@ -469,21 +444,6 @@ p {
   font-weight: 700;
 }
 
-.testimonial {
-  text-align: center;
-  max-width: 760px;
-}
-
-.testimonial blockquote {
-  margin: 0;
-  font-family: "Sora", "Segoe UI", sans-serif;
-  font-size: clamp(1.2rem, 2.7vw, 1.8rem);
-}
-
-.testimonial p {
-  color: var(--muted);
-}
-
 .cta {
   display: grid;
   grid-template-columns: 1.05fr 1fr;
@@ -631,7 +591,6 @@ select:focus {
     width: 100%;
   }
 
-  .hero-stats,
   .grid-cards,
   .panel-grid,
   .pricing-grid,
