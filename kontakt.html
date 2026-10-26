@@ -1,0 +1,102 @@
+﻿<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fresh Interior | Kontakt</title>
+    <meta
+      name="description"
+      content="Kontakt und Terminanfrage für Fresh Interior Auto-Innenraumwäsche. Schnell und unkompliziert euren Wunschtermin sichern."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Sora:wght@600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body class="page-contact">
+    <div class="bg-orb orb-a"></div>
+    <div class="bg-orb orb-b"></div>
+
+    <header class="site-header container">
+      <a class="brand" href="index.html" aria-label="Fresh Interior Startseite">
+        <span class="brand-mark">CG</span>
+        <span class="brand-name">Fresh Interior</span>
+      </a>
+      <button
+        class="menu-toggle"
+        type="button"
+        aria-expanded="false"
+        aria-controls="primary-nav"
+        aria-label="Menü öffnen"
+      >
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <nav class="main-nav" id="primary-nav" aria-label="Hauptnavigation">
+        <a href="index.html">Start</a>
+        <a href="leistungen.html">Leistungen</a>
+        <a href="preise.html">Preise</a>
+        <a href="kontakt.html" class="btn btn-small">Termin sichern</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero sub-hero container reveal">
+        <p class="eyebrow">Kontakt</p>
+        <h1>Termin für eure Innenraumwäsche anfragen</h1>
+        <p class="hero-copy">
+          Schreibt uns kurz Fahrzeugtyp, Wunschzeit und Besonderheiten. Wir melden uns
+          schnell mit einem passenden Vorschlag.
+        </p>
+      </section>
+
+      <section class="section container cta reveal">
+        <div>
+          <p class="eyebrow">Direkt erreichbar</p>
+          <h2>Fresh Interior Service-Team</h2>
+          <p>Di, Mi, Fr: 16:00-21:00 Uhr | Wochenende: 10:00-21:00 Uhr</p>
+          <p>Tel: +436765014356</p>
+          <p>E-Mail: Fresh_interior@outlook.com</p>
+        </div>
+        <form class="contact-form" action="https://formsubmit.co/Fresh_interior@outlook.com" method="post">
+          <input type="hidden" name="_subject" value="Neue Anfrage über die Website" />
+          <input type="hidden" name="_captcha" value="false" />
+          <label>
+            Name
+            <input type="text" name="name" placeholder="Max Mustermann" required />
+          </label>
+          <label>
+            E-Mail
+            <input type="email" name="email" placeholder="name@beispiel.de" required />
+          </label>
+          <label>
+            Fahrzeug & Wunsch
+            <textarea
+              name="message"
+              rows="4"
+              placeholder="z.B. SUV, starke Flecken auf Rückbank, Termin diese Woche"
+              required
+            ></textarea>
+          </label>
+          <button type="submit" class="btn btn-primary">Anfrage senden</button>
+          <p class="form-status" aria-live="polite"></p>
+        </form>
+      </section>
+    </main>
+
+    <footer class="site-footer container">
+      <p>Fresh Interior Innenraumwäsche | Di, Mi, Fr 16:00-21:00 Uhr | Wochenende 10:00-21:00 Uhr</p>
+      <p>Tel: +436765014356 | E-Mail: Fresh_interior@outlook.com</p>
+      <p class="legal-links"><a href="impressum.html">Impressum</a> | <a href="datenschutz.html">Datenschutz</a></p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
+
+
+

@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fresh Interior | Anfrage Basic Clean</title>
+    <meta
+      name="description"
+      content="Anfrageformular für das Basic Clean Paket von Fresh Interior."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Sora:wght@600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body class="page-request-basic">
+    <div class="bg-orb orb-a"></div>
+    <div class="bg-orb orb-b"></div>
+
+    <header class="site-header container">
+      <a class="brand" href="index.html" aria-label="Fresh Interior Startseite">
+        <span class="brand-mark">CG</span>
+        <span class="brand-name">Fresh Interior</span>
+      </a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-nav" aria-label="Menü öffnen">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="main-nav" id="primary-nav" aria-label="Hauptnavigation">
+        <a href="index.html">Start</a>
+        <a href="leistungen.html">Leistungen</a>
+        <a href="preise.html">Preise</a>
+        <a href="kontakt.html" class="btn btn-small">Termin sichern</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero sub-hero container reveal">
+        <p class="eyebrow">Anfrageformular</p>
+        <h1>Basic Clean anfragen</h1>
+        <p class="hero-copy">Schnell anfragen und Termin für das Paket Basic Clean sichern.</p>
+      </section>
+
+      <section class="section container cta reveal">
+        <div>
+          <p class="eyebrow">Paket</p>
+          <h2>Basic Clean | 69 EUR</h2>
+          <p>Für regelmäßige Innenraumauffrischung und sauberen Alltagseindruck.</p>
+        </div>
+        <form class="contact-form" action="https://formsubmit.co/Fresh_interior@outlook.com" method="post">
+          <input type="hidden" name="_subject" value="Anfrage Basic Clean" />
+          <input type="hidden" name="_captcha" value="false" />
+          <input type="hidden" name="Paket" value="Basic Clean" />
+          <label>
+            Name
+            <input type="text" name="name" placeholder="Max Mustermann" required />
+          </label>
+          <label>
+            E-Mail
+            <input type="email" name="email" placeholder="name@beispiel.de" required />
+          </label>
+          <label>
+            Wunschtermin & Details
+            <textarea name="message" rows="4" placeholder="z.B. Freitag 18:00 Uhr, Kompaktwagen, leichte Verschmutzung" required></textarea>
+          </label>
+          <button type="submit" class="btn btn-primary">Basic Clean Anfrage senden</button>
+          <p class="form-status" aria-live="polite"></p>
+        </form>
+      </section>
+    </main>
+
+    <footer class="site-footer container">
+      <p>Fresh Interior Innenraumwäsche | Di, Mi, Fr 16:00-21:00 Uhr | Wochenende 10:00-21:00 Uhr</p>
+      <p>Tel: +436765014356 | E-Mail: Fresh_interior@outlook.com</p>
+      <p class="legal-links"><a href="impressum.html">Impressum</a> | <a href="datenschutz.html">Datenschutz</a></p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
