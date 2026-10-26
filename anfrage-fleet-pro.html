@@ -52,18 +52,48 @@
         <form class="contact-form" action="https://formsubmit.co/Fresh_interior@outlook.com" method="post">
           <input type="hidden" name="_subject" value="Anfrage Fleet Pro" />
           <input type="hidden" name="_captcha" value="false" />
+          <input type="hidden" name="_next" value="https://fresh-interior.netlify.app/danke.html" />
+          <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off" />
           <input type="hidden" name="Paket" value="Fleet Pro" />
           <label>
             Ansprechpartner
-            <input type="text" name="name" placeholder="Firma / Kontaktperson" required />
+            <input type="text" name="name" placeholder="Firma / Kontaktperson" minlength="2" required />
           </label>
           <label>
             E-Mail
             <input type="email" name="email" placeholder="firma@beispiel.at" required />
           </label>
           <label>
+            Telefonnummer
+            <input
+              type="tel"
+              name="telefon"
+              placeholder="z. B. +43 676 5014356"
+              pattern="^[+0-9()\-\s]{8,20}$"
+              required
+            />
+          </label>
+          <label>
+            Anzahl Fahrzeuge
+            <input type="number" name="anzahl_fahrzeuge" min="2" max="500" placeholder="z. B. 12" required />
+          </label>
+          <label>
+            Gewünschtes Intervall
+            <select name="intervall" required>
+              <option value="" selected disabled>Bitte auswählen</option>
+              <option value="Woechentlich">Wöchentlich</option>
+              <option value="2x monatlich">2x monatlich</option>
+              <option value="Monatlich">Monatlich</option>
+              <option value="Individuell">Individuell</option>
+            </select>
+          </label>
+          <label>
             Flottengröße & Wunsch
-            <textarea name="message" rows="4" placeholder="z.B. 12 Fahrzeuge, monatliche Reinigung, bevorzugt Freitag" required></textarea>
+            <textarea name="message" rows="4" minlength="20" placeholder="z.B. 12 Fahrzeuge, monatliche Reinigung, bevorzugt Freitag" required></textarea>
+          </label>
+          <label class="consent-row">
+            <input type="checkbox" name="datenschutz" required />
+            Ich stimme der Verarbeitung meiner Daten zur Bearbeitung der Anfrage zu.
           </label>
           <button type="submit" class="btn btn-primary">Fleet Pro Anfrage senden</button>
           <p class="form-status" aria-live="polite"></p>

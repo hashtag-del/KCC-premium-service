@@ -52,18 +52,42 @@
         <form class="contact-form" action="https://formsubmit.co/Fresh_interior@outlook.com" method="post">
           <input type="hidden" name="_subject" value="Anfrage Deep Fresh" />
           <input type="hidden" name="_captcha" value="false" />
+          <input type="hidden" name="_next" value="https://fresh-interior.netlify.app/danke.html" />
+          <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off" />
           <input type="hidden" name="Paket" value="Deep Fresh" />
           <label>
             Name
-            <input type="text" name="name" placeholder="Max Mustermann" required />
+            <input type="text" name="name" placeholder="Max Mustermann" minlength="2" required />
           </label>
           <label>
             E-Mail
             <input type="email" name="email" placeholder="name@beispiel.de" required />
           </label>
           <label>
+            Telefonnummer
+            <input
+              type="tel"
+              name="telefon"
+              placeholder="z. B. +43 676 5014356"
+              pattern="^[+0-9()\-\s]{8,20}$"
+              required
+            />
+          </label>
+          <label>
+            Fahrzeugtyp
+            <input type="text" name="fahrzeugtyp" placeholder="z. B. Audi A4 Avant" required />
+          </label>
+          <label>
+            Hauptproblem
+            <input type="text" name="hauptproblem" placeholder="z. B. Flecken auf den Sitzen, Geruch" required />
+          </label>
+          <label>
             Wunschtermin & Details
-            <textarea name="message" rows="4" placeholder="z.B. Samstag 11:00 Uhr, SUV, Flecken auf Rückbank" required></textarea>
+            <textarea name="message" rows="4" minlength="20" placeholder="z.B. Samstag 11:00 Uhr, SUV, Flecken auf Rückbank" required></textarea>
+          </label>
+          <label class="consent-row">
+            <input type="checkbox" name="datenschutz" required />
+            Ich stimme der Verarbeitung meiner Daten zur Bearbeitung der Anfrage zu.
           </label>
           <button type="submit" class="btn btn-primary">Deep Fresh Anfrage senden</button>
           <p class="form-status" aria-live="polite"></p>

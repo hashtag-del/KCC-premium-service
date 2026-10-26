@@ -522,7 +522,8 @@ p {
 }
 
 input,
-textarea {
+textarea,
+select {
   width: 100%;
   border-radius: 12px;
   border: 1px solid rgba(255, 255, 255, 0.25);
@@ -533,9 +534,21 @@ textarea {
 }
 
 input:focus,
-textarea:focus {
+textarea:focus,
+select:focus {
   outline: 2px solid rgba(245, 165, 36, 0.35);
   border-color: var(--accent);
+}
+
+.consent-row {
+  grid-template-columns: auto 1fr;
+  align-items: start;
+  gap: 0.55rem;
+}
+
+.consent-row input[type="checkbox"] {
+  width: auto;
+  margin-top: 0.12rem;
 }
 
 .site-footer {
