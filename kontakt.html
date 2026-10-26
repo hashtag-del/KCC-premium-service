@@ -62,22 +62,11 @@
           <p>Tel: +436765014356</p>
           <p>E-Mail: Fresh_interior@outlook.com</p>
         </div>
-        <form
-          class="contact-form"
-          name="terminanfrage"
-          method="POST"
-          data-netlify="true"
-          data-netlify-recaptcha="true"
-          netlify-honeypot="bot-field"
-          action="/danke.html"
-        >
-          <input type="hidden" name="form-name" value="terminanfrage" />
-          <p hidden>
-            <label>
-              Nicht ausfüllen:
-              <input name="bot-field" />
-            </label>
-          </p>
+        <form class="contact-form" action="https://formsubmit.co/Fresh_interior@outlook.com" method="POST">
+          <input type="hidden" name="_subject" value="Neue Anfrage über die Website" />
+          <input type="hidden" name="_captcha" value="false" />
+          <input type="hidden" name="_next" value="https://fresh-interior.netlify.app/danke.html" />
+          <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off" />
           <label>
             Name
             <input type="text" name="name" placeholder="Max Mustermann" minlength="2" required />
@@ -114,7 +103,6 @@
             <input type="checkbox" name="datenschutz" required />
             Ich stimme der Verarbeitung meiner Daten zur Bearbeitung der Anfrage zu.
           </label>
-          <div data-netlify-recaptcha="true"></div>
           <button type="submit" class="btn btn-primary">Anfrage senden</button>
           <p class="form-status" aria-live="polite"></p>
         </form>
