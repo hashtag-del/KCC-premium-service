@@ -22,6 +22,7 @@ if (form) {
     const status = form.querySelector('.form-status');
 
     if (button) {
+      button.dataset.label = button.textContent;
       button.textContent = 'Wird gesendet...';
       button.disabled = true;
     }
@@ -66,7 +67,7 @@ if (form) {
       }
     } finally {
       if (button) {
-        button.textContent = 'Anfrage senden';
+        button.textContent = button.dataset.label || 'Auswählen';
         button.disabled = false;
       }
     }
