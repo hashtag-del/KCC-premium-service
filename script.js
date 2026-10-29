@@ -91,20 +91,6 @@ if (currentPage === 'impressum.html' || currentPage === 'datenschutz.html') {
   }
 }
 
-if (
-  currentPage === 'raeumung-kompakt.html' ||
-  currentPage === 'raeumung-komplett.html' ||
-  currentPage === 'raeumung-business.html' ||
-  currentPage === 'anfrage-kompakt.html' ||
-  currentPage === 'anfrage-komplett.html' ||
-  currentPage === 'anfrage-business.html'
-) {
-  const pricingLink = document.querySelector('.main-nav a[href="preise.html"]');
-  if (pricingLink) {
-    pricingLink.classList.add('active-page');
-  }
-}
-
 const menuToggle = document.querySelector('.menu-toggle');
 const mainNav = document.querySelector('.main-nav');
 
