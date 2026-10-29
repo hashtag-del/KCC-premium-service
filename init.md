@@ -8,7 +8,7 @@
 - Telefon: +4367763267134
 - E-Mail: Fresh_interior@outlook.com (HINWEIS: für die Marke besser später z. B. kcc.premiumdienste@outlook.com anlegen und überall tauschen)
 - Website: statische Multi-Page-Website (HTML, CSS, JS)
-- Live: https://fresh-interior.netlify.app/
+- Live: https://kccpremiumservice.netlify.app/
 - Repo: https://github.com/hashtag-del/fresh-interior
 
 ## Design (Basis: Referenzbilder vom User)
