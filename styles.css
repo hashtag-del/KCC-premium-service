@@ -1,11 +1,11 @@
 :root {
-  --bg: #07181c;
-  --surface: #0d262d;
-  --surface-soft: #12323a;
-  --text: #e8f0ed;
-  --muted: #9eb3ad;
-  --accent: #f5a524;
-  --accent-2: #42d7c2;
+  --bg: #0a1f19;
+  --surface: #123129;
+  --surface-soft: #173e33;
+  --text: #f3efe2;
+  --muted: #a9baa9;
+  --accent: #d4b96a;
+  --accent-2: #e0cd8f;
   --shadow: rgba(0, 0, 0, 0.35);
   --radius: 18px;
   --max-width: 1140px;
@@ -48,67 +48,67 @@ body::after {
 }
 
 body.page-home {
-  background-color: #07181c;
+  background-color: #0a1f19;
 }
 
 body.page-home::before {
-  background-image: url("assets/images/home.jpg");
+  background-image: none;
 }
 
 body.page-services {
-  background-color: #07171f;
+  background-color: #0b201a;
 }
 
 body.page-services::before {
-  background-image: url("assets/images/services.jpg");
+  background-image: none;
 }
 
 body.page-pricing {
-  background-color: #15100a;
+  background-color: #141007;
 }
 
 body.page-pricing::before {
-  background-image: url("assets/images/pricing.jpg");
+  background-image: none;
 }
 
 body.page-contact {
-  background-color: #081014;
+  background-color: #081410;
 }
 
 body.page-contact::before {
-  background-image: url("assets/images/contact.jpg");
+  background-image: none;
 }
 
 body.page-request {
-  background-color: #0a1418;
+  background-color: #0a1712;
 }
 
 body.page-request::before {
-  background-image: url("assets/images/request.jpg");
+  background-image: none;
 }
 
 body.page-request-basic {
-  background-color: #0a1418;
+  background-color: #0a1712;
 }
 
 body.page-request-basic::before {
-  background-image: url("assets/images/request-basic.jpg");
+  background-image: none;
 }
 
 body.page-request-deep {
-  background-color: #091319;
+  background-color: #091611;
 }
 
 body.page-request-deep::before {
-  background-image: url("assets/images/request-deep.jpg");
+  background-image: none;
 }
 
 body.page-request-fleet {
-  background-color: #0b151a;
+  background-color: #0b1813;
 }
 
 body.page-request-fleet::before {
-  background-image: url("assets/images/request-fleet.jpg");
+  background-image: none;
 }
 
 h1,
@@ -140,13 +140,13 @@ p {
 }
 
 .orb-a {
-  background: #2ac7c0;
+  background: #2e7d5b;
   top: -90px;
   right: -40px;
 }
 
 .orb-b {
-  background: #ffb347;
+  background: #d4b96a;
   bottom: -110px;
   left: -80px;
 }
@@ -173,14 +173,15 @@ p {
 }
 
 .brand-mark {
-  width: 2.1rem;
+  width: 2.6rem;
   height: 2.1rem;
   border-radius: 9px;
   display: grid;
   place-items: center;
-  background: linear-gradient(135deg, var(--accent), #ffc96e);
+  background: linear-gradient(135deg, var(--accent), #e8d49a);
   color: #1a1200;
-  font-size: 0.9rem;
+  font-size: 0.72rem;
+  letter-spacing: 0.04em;
 }
 
 .main-nav {
@@ -243,10 +244,10 @@ p {
 }
 
 .btn-primary {
-  background: linear-gradient(120deg, #f6b63d, #ffd06d);
+  background: linear-gradient(120deg, var(--accent), #ecd189);
   color: #1f1400;
-  box-shadow: 0 12px 34px rgba(246, 182, 61, 0.38);
-  border-color: rgba(255, 228, 160, 0.5);
+  box-shadow: 0 12px 34px rgba(212, 185, 106, 0.35);
+  border-color: rgba(240, 222, 170, 0.5);
 }
 
 .btn-ghost {
@@ -300,7 +301,7 @@ p {
 }
 
 .home-price-callout {
-  background: linear-gradient(135deg, rgba(19, 60, 70, 0.94), rgba(14, 31, 36, 0.92));
+  background: linear-gradient(135deg, rgba(23, 68, 53, 0.94), rgba(13, 33, 26, 0.92));
   border: 1px solid rgba(255, 255, 255, 0.12);
   border-radius: 24px;
   padding: 1.5rem;
@@ -365,15 +366,15 @@ p {
 }
 
 .panel-a {
-  background: linear-gradient(150deg, rgba(21, 66, 78, 0.88), rgba(10, 34, 40, 0.92));
+  background: linear-gradient(150deg, rgba(24, 74, 58, 0.88), rgba(11, 38, 30, 0.92));
 }
 
 .panel-b {
-  background: linear-gradient(150deg, rgba(62, 49, 23, 0.88), rgba(24, 31, 37, 0.92));
+  background: linear-gradient(150deg, rgba(74, 62, 26, 0.88), rgba(26, 33, 24, 0.92));
 }
 
 .panel-c {
-  background: linear-gradient(150deg, rgba(22, 61, 55, 0.88), rgba(12, 34, 40, 0.94));
+  background: linear-gradient(150deg, rgba(30, 72, 51, 0.88), rgba(13, 37, 28, 0.94));
 }
 
 .price-notes .card {
@@ -382,7 +383,7 @@ p {
 
 .card {
   padding: 1.2rem;
-  background: linear-gradient(150deg, rgba(17, 53, 63, 0.8), rgba(15, 39, 45, 0.9));
+  background: linear-gradient(150deg, rgba(20, 60, 47, 0.8), rgba(16, 43, 34, 0.9));
   border-radius: var(--radius);
   border: 1px solid rgba(255, 255, 255, 0.09);
 }
@@ -423,7 +424,7 @@ p {
   place-items: center;
   font-weight: 700;
   color: #191100;
-  background: linear-gradient(145deg, var(--accent), #ffcb79);
+  background: linear-gradient(145deg, var(--accent), #ecd189);
 }
 
 .process p {
@@ -459,8 +460,8 @@ p {
 }
 
 .featured {
-  background: linear-gradient(160deg, #1f4550 0%, #123139 100%);
-  border-color: rgba(245, 165, 36, 0.45);
+  background: linear-gradient(160deg, #1d4738 0%, #123129 100%);
+  border-color: rgba(212, 185, 106, 0.5);
   transform: translateY(-6px);
 }
 
@@ -520,7 +521,7 @@ select {
   width: 100%;
   border-radius: 12px;
   border: 1px solid rgba(255, 255, 255, 0.25);
-  background: rgba(8, 27, 32, 0.7);
+  background: rgba(8, 26, 20, 0.7);
   color: var(--text);
   padding: 0.72rem 0.75rem;
   font: inherit;
@@ -529,7 +530,7 @@ select {
 input:focus,
 textarea:focus,
 select:focus {
-  outline: 2px solid rgba(245, 165, 36, 0.35);
+  outline: 2px solid rgba(212, 185, 106, 0.4);
   border-color: var(--accent);
 }
 

@@ -1,12 +1,12 @@
-﻿<!doctype html>
+<!doctype html>
 <html lang="de">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Fresh Interior | Kontakt</title>
+    <title>KCC Premiumdienste | Kontakt</title>
     <meta
       name="description"
-      content="Kontakt und Terminanfrage für Fresh Interior Auto-Innenraumwäsche. Schnell und unkompliziert euren Wunschtermin sichern."
+      content="Kontakt und Anfrage für Wohnungsräumungen mit KCC Premiumdienste. Kostenlose Besichtigung in Wien & Niederösterreich vereinbaren."
     />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -21,9 +21,9 @@
     <div class="bg-orb orb-b"></div>
 
     <header class="site-header container">
-      <a class="brand" href="index.html" aria-label="Fresh Interior Startseite">
-        <span class="brand-mark">CG</span>
-        <span class="brand-name">Fresh Interior</span>
+      <a class="brand" href="index.html" aria-label="KCC Premiumdienste Startseite">
+        <span class="brand-mark">KCC</span>
+        <span class="brand-name">KCC Premiumdienste</span>
       </a>
       <button
         class="menu-toggle"
@@ -47,23 +47,23 @@
     <main>
       <section class="hero sub-hero container reveal">
         <p class="eyebrow">Kontakt</p>
-        <h1>Termin für eure Innenraumwäsche anfragen</h1>
+        <h1>Kostenlose Besichtigung für deine Räumung anfragen</h1>
         <p class="hero-copy">
-          Schreibt uns kurz Fahrzeugtyp, Wunschzeit und Besonderheiten. Wir melden uns
-          schnell mit einem passenden Vorschlag.
+          Schreibt uns kurz Adresse, Wohnungsgröße und Zeitraum. Wir melden uns
+          schnell mit einem passenden Besichtigungstermin.
         </p>
       </section>
 
       <section class="section container cta reveal">
         <div>
           <p class="eyebrow">Direkt erreichbar</p>
-          <h2>Fresh Interior Service-Team</h2>
+          <h2>KCC Premiumdienste Team</h2>
           <p>Di, Mi, Fr: 16:00-21:00 Uhr | Wochenende: 10:00-21:00 Uhr</p>
           <p>Tel: +4367763267134</p>
           <p>E-Mail: Fresh_interior@outlook.com</p>
         </div>
         <form class="contact-form" action="https://formsubmit.co/Fresh_interior@outlook.com" method="POST">
-          <input type="hidden" name="_subject" value="Neue Anfrage über die Website" />
+          <input type="hidden" name="_subject" value="Neue Räumungsanfrage über die Website" />
           <input type="hidden" name="_captcha" value="false" />
           <input type="hidden" name="_next" value="https://fresh-interior.netlify.app/danke.html" />
           <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off" />
@@ -73,7 +73,7 @@
           </label>
           <label>
             E-Mail
-            <input type="email" name="email" placeholder="name@beispiel.de" required />
+            <input type="email" name="email" placeholder="name@beispiel.at" required />
           </label>
           <label>
             Telefonnummer
@@ -86,31 +86,35 @@
             />
           </label>
           <label>
+            Adresse der Wohnung
+            <input type="text" name="adresse" placeholder="z. B. Hummelgasse 50, 1130 Wien" required />
+          </label>
+          <label>
             Rückrufzeit (optional)
             <input type="text" name="rueckrufzeit" placeholder="z. B. heute ab 18:30 Uhr" />
           </label>
           <label>
-            Fahrzeug & Wunsch
+            Wohnung &amp; Zeitraum
             <textarea
               name="message"
               rows="4"
-              placeholder="z.B. SUV, starke Flecken auf Rückbank, Termin diese Woche"
+              placeholder="z.B. 2-Zimmer-Wohnung, ca. 55 m², 3. Stock mit Lift, Auszug bis Ende des Monats"
               minlength="20"
               required
             ></textarea>
           </label>
-          <label>
+          <label class="consent-row">
             <input type="checkbox" name="datenschutz" required />
             Ich stimme der Verarbeitung meiner Daten zur Bearbeitung der Anfrage zu.
           </label>
-          <button type="submit" class="btn btn-primary">Anfrage senden</button>
+          <button type="submit" class="btn btn-primary">Besichtigung anfragen</button>
           <p class="form-status" aria-live="polite"></p>
         </form>
       </section>
     </main>
 
     <footer class="site-footer container">
-      <p>Fresh Interior Innenraumwäsche | Di, Mi, Fr 16:00-21:00 Uhr | Wochenende 10:00-21:00 Uhr</p>
+      <p>KCC Premiumdienste | Räumungen in Wien &amp; Niederösterreich | Di, Mi, Fr 16:00-21:00 Uhr | Wochenende 10:00-21:00 Uhr</p>
       <p>Tel: +4367763267134 | E-Mail: Fresh_interior@outlook.com</p>
       <p class="legal-links"><a href="impressum.html">Impressum</a> | <a href="datenschutz.html">Datenschutz</a></p>
     </footer>
@@ -118,6 +122,3 @@
     <script src="script.js"></script>
   </body>
 </html>
-
-
-

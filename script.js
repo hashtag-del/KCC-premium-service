@@ -91,12 +91,12 @@ if (currentPage === 'impressum.html' || currentPage === 'datenschutz.html') {
 }
 
 if (
-  currentPage === 'basic-clean.html' ||
-  currentPage === 'deep-fresh.html' ||
-  currentPage === 'fleet-pro.html' ||
-  currentPage === 'anfrage-basic-clean.html' ||
-  currentPage === 'anfrage-deep-fresh.html' ||
-  currentPage === 'anfrage-fleet-pro.html'
+  currentPage === 'raeumung-kompakt.html' ||
+  currentPage === 'raeumung-komplett.html' ||
+  currentPage === 'raeumung-business.html' ||
+  currentPage === 'anfrage-kompakt.html' ||
+  currentPage === 'anfrage-komplett.html' ||
+  currentPage === 'anfrage-business.html'
 ) {
   const pricingLink = document.querySelector('.main-nav a[href="preise.html"]');
   if (pricingLink) {

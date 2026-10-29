@@ -11,6 +11,7 @@
         "/^Get-Item \\.\\\\reel-wien23-tiktok-aggressive\\.mp4, \\.\\\\reel-wien23-instagram-clean\\.mp4 \\| Select-Object Name,Length,LastWriteTime$/": {
             "approve": true,
             "matchCommandLine": true
-        }
+        },
+        "Move-Item": true
     }
 }

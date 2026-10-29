@@ -3,10 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Fresh Interior | Anfrage Basic Clean</title>
+    <title>KCC Premiumdienste | Anfrage Räumung Business</title>
     <meta
       name="description"
-      content="Anfrageformular für das Basic Clean Paket von Fresh Interior."
+      content="Anfrageformular für das Paket Räumung Business von KCC Premiumdienste – für Hausverwaltungen, Firmen und Makler."
     />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -16,14 +16,14 @@
     />
     <link rel="stylesheet" href="styles.css" />
   </head>
-  <body class="page-request-basic">
+  <body class="page-request-fleet">
     <div class="bg-orb orb-a"></div>
     <div class="bg-orb orb-b"></div>
 
     <header class="site-header container">
-      <a class="brand" href="index.html" aria-label="Fresh Interior Startseite">
-        <span class="brand-mark">CG</span>
-        <span class="brand-name">Fresh Interior</span>
+      <a class="brand" href="index.html" aria-label="KCC Premiumdienste Startseite">
+        <span class="brand-mark">KCC</span>
+        <span class="brand-name">KCC Premiumdienste</span>
       </a>
       <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-nav" aria-label="Menü öffnen">
         <span></span><span></span><span></span>
@@ -39,29 +39,29 @@
     <main>
       <section class="hero sub-hero container reveal">
         <p class="eyebrow">Anfrageformular</p>
-        <h1>Basic Clean anfragen</h1>
-        <p class="hero-copy">Schnell anfragen und Termin für das Paket Basic Clean sichern.</p>
+        <h1>Räumung Business anfragen</h1>
+        <p class="hero-copy">Für Hausverwaltungen, Firmen und Makler: planbare Räumungen mit festen Zeitfenstern.</p>
       </section>
 
       <section class="section container cta reveal">
         <div>
           <p class="eyebrow">Paket</p>
-          <h2>Basic Clean | 69 EUR</h2>
-          <p>Für regelmäßige Innenraumauffrischung und sauberen Alltagseindruck.</p>
+          <h2>Räumung Business | auf Anfrage</h2>
+          <p>Skalierbare Räumungslösungen mit Rahmenvertrag für professionelle Partner.</p>
         </div>
         <form class="contact-form" action="https://formsubmit.co/Fresh_interior@outlook.com" method="post">
-          <input type="hidden" name="_subject" value="Anfrage Basic Clean" />
+          <input type="hidden" name="_subject" value="Anfrage Räumung Business" />
           <input type="hidden" name="_captcha" value="false" />
           <input type="hidden" name="_next" value="https://fresh-interior.netlify.app/danke.html" />
           <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off" />
-          <input type="hidden" name="Paket" value="Basic Clean" />
+          <input type="hidden" name="Paket" value="Räumung Business" />
           <label>
-            Name
-            <input type="text" name="name" placeholder="Max Mustermann" minlength="2" required />
+            Ansprechpartner
+            <input type="text" name="name" placeholder="Firma / Kontaktperson" minlength="2" required />
           </label>
           <label>
             E-Mail
-            <input type="email" name="email" placeholder="name@beispiel.de" required />
+            <input type="email" name="email" placeholder="firma@beispiel.at" required />
           </label>
           <label>
             Telefonnummer
@@ -74,29 +74,35 @@
             />
           </label>
           <label>
-            Fahrzeugtyp
-            <input type="text" name="fahrzeugtyp" placeholder="z. B. VW Golf, Kombi" required />
+            Anzahl der Objekte / Wohnungen
+            <input type="number" name="anzahl_objekte" min="1" max="500" placeholder="z. B. 5" required />
           </label>
           <label>
-            Wunschtermin
-            <input type="text" name="wunschtermin" placeholder="z. B. Mittwoch ab 18:00 Uhr" required />
+            Gewünschter Rahmen
+            <select name="intervall" required>
+              <option value="" selected disabled>Bitte auswählen</option>
+              <option value="Einmalig">Einmalig</option>
+              <option value="Mehrere Objekte">Mehrere Objekte</option>
+              <option value="Laufend (Rahmenvertrag)">Laufend (Rahmenvertrag)</option>
+              <option value="Individuell">Individuell</option>
+            </select>
           </label>
           <label>
-            Wunschtermin & Details
-            <textarea name="message" rows="4" minlength="20" placeholder="z.B. Freitag 18:00 Uhr, Kompaktwagen, leichte Verschmutzung" required></textarea>
+            Objekte &amp; Wunsch
+            <textarea name="message" rows="4" minlength="20" placeholder="z.B. Hausverwaltung, 5 Wohnungen pro Quartal, bevorzugt Freitag" required></textarea>
           </label>
           <label class="consent-row">
             <input type="checkbox" name="datenschutz" required />
             Ich stimme der Verarbeitung meiner Daten zur Bearbeitung der Anfrage zu.
           </label>
-          <button type="submit" class="btn btn-primary">Basic Clean Anfrage senden</button>
+          <button type="submit" class="btn btn-primary">Räumung Business anfragen</button>
           <p class="form-status" aria-live="polite"></p>
         </form>
       </section>
     </main>
 
     <footer class="site-footer container">
-      <p>Fresh Interior Innenraumwäsche | Di, Mi, Fr 16:00-21:00 Uhr | Wochenende 10:00-21:00 Uhr</p>
+      <p>KCC Premiumdienste | Räumungen in Wien &amp; Niederösterreich | Di, Mi, Fr 16:00-21:00 Uhr | Wochenende 10:00-21:00 Uhr</p>
       <p>Tel: +4367763267134 | E-Mail: Fresh_interior@outlook.com</p>
       <p class="legal-links"><a href="impressum.html">Impressum</a> | <a href="datenschutz.html">Datenschutz</a></p>
     </footer>

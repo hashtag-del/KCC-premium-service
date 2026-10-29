@@ -3,10 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Fresh Interior | Anfrage Deep Fresh</title>
+    <title>KCC Premiumdienste | Anfrage Räumung Kompakt</title>
     <meta
       name="description"
-      content="Anfrageformular für das Deep Fresh Paket von Fresh Interior."
+      content="Anfrageformular für das Paket Räumung Kompakt von KCC Premiumdienste – kostenlose Besichtigung sichern."
     />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -16,14 +16,14 @@
     />
     <link rel="stylesheet" href="styles.css" />
   </head>
-  <body class="page-request-deep">
+  <body class="page-request-basic">
     <div class="bg-orb orb-a"></div>
     <div class="bg-orb orb-b"></div>
 
     <header class="site-header container">
-      <a class="brand" href="index.html" aria-label="Fresh Interior Startseite">
-        <span class="brand-mark">CG</span>
-        <span class="brand-name">Fresh Interior</span>
+      <a class="brand" href="index.html" aria-label="KCC Premiumdienste Startseite">
+        <span class="brand-mark">KCC</span>
+        <span class="brand-name">KCC Premiumdienste</span>
       </a>
       <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-nav" aria-label="Menü öffnen">
         <span></span><span></span><span></span>
@@ -39,29 +39,29 @@
     <main>
       <section class="hero sub-hero container reveal">
         <p class="eyebrow">Anfrageformular</p>
-        <h1>Deep Fresh anfragen</h1>
-        <p class="hero-copy">Sichert euch die intensive Innenraum-Tiefenreinigung mit Deep Fresh.</p>
+        <h1>Räumung Kompakt anfragen</h1>
+        <p class="hero-copy">Schnell anfragen und kostenlose Besichtigung für Keller, Garage oder kleine Wohnung sichern.</p>
       </section>
 
       <section class="section container cta reveal">
         <div>
           <p class="eyebrow">Paket</p>
-          <h2>Deep Fresh | 129 EUR</h2>
-          <p>Unser meist gebuchtes Paket mit Polster-Tiefenreinigung und Geruchsneutralisierung.</p>
+          <h2>Räumung Kompakt | ab 290 EUR</h2>
+          <p>Für Keller, Garagen, Abstellräume und kompakte 1-2-Zimmer-Wohnungen.</p>
         </div>
         <form class="contact-form" action="https://formsubmit.co/Fresh_interior@outlook.com" method="post">
-          <input type="hidden" name="_subject" value="Anfrage Deep Fresh" />
+          <input type="hidden" name="_subject" value="Anfrage Räumung Kompakt" />
           <input type="hidden" name="_captcha" value="false" />
           <input type="hidden" name="_next" value="https://fresh-interior.netlify.app/danke.html" />
           <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off" />
-          <input type="hidden" name="Paket" value="Deep Fresh" />
+          <input type="hidden" name="Paket" value="Räumung Kompakt" />
           <label>
             Name
             <input type="text" name="name" placeholder="Max Mustermann" minlength="2" required />
           </label>
           <label>
             E-Mail
-            <input type="email" name="email" placeholder="name@beispiel.de" required />
+            <input type="email" name="email" placeholder="name@beispiel.at" required />
           </label>
           <label>
             Telefonnummer
@@ -74,33 +74,37 @@
             />
           </label>
           <label>
-            Fahrzeugtyp
-            <input type="text" name="fahrzeugtyp" placeholder="z. B. Audi A4 Avant" required />
+            Adresse
+            <input type="text" name="adresse" placeholder="z. B. Hummelgasse 50, 1130 Wien" required />
           </label>
           <label>
-            Hauptproblem
-            <input type="text" name="hauptproblem" placeholder="z. B. Flecken auf den Sitzen, Geruch" required />
+            Was soll geräumt werden?
+            <input type="text" name="raeumflaeche" placeholder="z. B. Keller ca. 15 m²" required />
           </label>
           <label>
-            Wunschtermin & Details
-            <textarea name="message" rows="4" minlength="20" placeholder="z.B. Samstag 11:00 Uhr, SUV, Flecken auf Rückbank" required></textarea>
+            Wunschzeitraum
+            <input type="text" name="wunschzeitraum" placeholder="z. B. nächste Woche, ab Mittwoch" required />
+          </label>
+          <label>
+            Details &amp; Besonderheiten
+            <textarea name="message" rows="4" minlength="20" placeholder="z.B. 3. Stock ohne Lift, viele Kartons und ein alter Schrank" required></textarea>
           </label>
           <label class="consent-row">
             <input type="checkbox" name="datenschutz" required />
             Ich stimme der Verarbeitung meiner Daten zur Bearbeitung der Anfrage zu.
           </label>
-          <button type="submit" class="btn btn-primary">Deep Fresh Anfrage senden</button>
+          <button type="submit" class="btn btn-primary">Räumung Kompakt anfragen</button>
           <p class="form-status" aria-live="polite"></p>
         </form>
       </section>
     </main>
 
     <footer class="site-footer container">
-      <p>Fresh Interior Innenraumwäsche | Di, Mi, Fr 16:00-21:00 Uhr | Wochenende 10:00-21:00 Uhr</p>
+      <p>KCC Premiumdienste | Räumungen in Wien &amp; Niederösterreich | Di, Mi, Fr 16:00-21:00 Uhr | Wochenende 10:00-21:00 Uhr</p>
       <p>Tel: +4367763267134 | E-Mail: Fresh_interior@outlook.com</p>
       <p class="legal-links"><a href="impressum.html">Impressum</a> | <a href="datenschutz.html">Datenschutz</a></p>
     </footer>
 
     <script src="script.js"></script>
   </body>
-  
+</html>

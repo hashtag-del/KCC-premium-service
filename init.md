@@ -1,99 +1,45 @@
-# Fresh Interior – Projektstatus
+# KCC Premiumdienste – Projektstatus
 
 ## Projektübersicht
-- Business: Auto Innenraumwäsche in Wien, Fokus auf Wien 23 und Umgebung
+- Business: Wohnungsräumungen & Haushaltsauflösungen (Hauptfokus), dazu Reinigung, Gartenpflege, Umzugshilfe, Fahrzeugpflege
+- Marke: KCC Premiumdienste (K = Kaiser, C = Clemens, C = Constantin)
+- Slogan: "Drei Freunde. Ein Team. Qualität."
+- Region: Wien & Niederösterreich
 - Telefon: +4367763267134
-- Website: statische Multi-Page-Website mit HTML, CSS und JavaScript
+- E-Mail: Fresh_interior@outlook.com (HINWEIS: für die Marke besser später z. B. kcc.premiumdienste@outlook.com anlegen und überall tauschen)
+- Website: statische Multi-Page-Website (HTML, CSS, JS)
 - Live: https://fresh-interior.netlify.app/
 - Repo: https://github.com/hashtag-del/fresh-interior
 
-## Was bereits umgesetzt wurde
+## Design (Basis: Referenzbilder vom User)
+- Dunkelgrün + Gold, Krone als Markenzeichen-Idee
+- Farben in styles.css: --bg #0a1f19, --surface #123129, --accent (Gold) #d4b96a
+- Foto-Hintergründe entfernt, stattdessen dunkle Farbflächen (Fotos passend zum Räumungsbusiness noch offen)
 
-### 1) Video / Social Content
-- Reel-Konzept für ein kleines Auto-Innenraum-Waschgeschäft in Wien 23 erstellt
-- MP4-Varianten erzeugt:
-  - reel-wien23.mp4
-  - reel-wien23-tiktok-aggressive.mp4
-  - reel-wien23-instagram-clean.mp4
-- Python-Skripte dafür: generate_reel.py, generate_reel_variants.py
-- Video-Assets / Untertitel: video-konzept-wien23.md, video-untertitel-wien23.srt
+## Aktuelle Seiten
+- index.html – Start: Hero "Wohnung räumen lassen", Warum KCC, Fixpreis-Callout, 3-Schritte-Ablauf, weitere Premiumdienste
+- leistungen.html – Wohnungsräumung, Haushaltsauflösung, Keller/Dachboden/Garage, Büro, Entsorgung, besenreine Übergabe
+- preise.html – Pakete: Räumung Kompakt (ab 290 EUR), Räumung Komplett (ab 690 EUR, featured), Räumung Business (auf Anfrage)
+- raeumung-kompakt.html / raeumung-komplett.html / raeumung-business.html – Paket-Detailseiten
+- anfrage-kompakt.html / anfrage-komplett.html / anfrage-business.html – Paket-Anfrageformulare (FormSubmit, Honeypot, DSGVO-Checkbox, Redirect auf danke.html)
+- kontakt.html – Hauptkontaktformular mit Adressfeld
+- danke.html – Danke-Seite nach Formular
+- impressum.html / datenschutz.html – auf KCC umgestellt
 
-### 2) Website
-- Multi-Page-Website aufgebaut:
-  - index.html
-  - leistungen.html
-  - preise.html
-  - kontakt.html
-  - impressum.html
-  - datenschutz.html
-  - basic-clean.html
-  - deep-fresh.html
-  - fleet-pro.html
-  - anfrage-basic-clean.html
-  - anfrage-deep-fresh.html
-  - anfrage-fleet-pro.html
-- Styling in styles.css
-- Interaktionen in script.js
-- Hauptziel: saubere, moderne, vertrauensvolle Präsentation für Privat- und Firmenkunden
+## Formulare / E-Mail
+- FormSubmit (kostenlos): https://formsubmit.co/Fresh_interior@outlook.com
+- WICHTIG: Nach erstem Test die FormSubmit-Aktivierungs-Mail bestätigen, sonst kommen keine Mails an
+- Pflichtfelder: Name, E-Mail, Telefon, paketspezifische Felder, DSGVO-Checkbox
 
-### 3) Formulare und E-Mail-Delivery
-- Kontaktformular wurde auf FormSubmit umgestellt, weil keine Bezahlung gewollt war
-- FormSubmit-Endpoint verwendet: https://formsubmit.co/Fresh_interior@outlook.com
-- Danke-Seite: danke.html
-- Lead-Qualität verbessert:
-  - Telefonnumer erforderlich
-  - Datenschutzerklärung/Einwilligung erforderlich
-  - Honeypot-Feld hinzugefügt
-  - paketbezogene Anfragefelder ergänzt
-  - Redirect auf Danke-Seite
+## Verlauf (alt → neu)
+- Ursprung: "Fresh Interior" Auto-Innenraumwäsche Wien 23
+- 2026-10-29: Komplette Umwandlung zu KCC Premiumdienste (Räumungen) anhand zweier Referenzbilder des Users
+- Alte Auto-Dateien (basic-clean/deep-fresh/fleet-pro + anfrage-*) wurden umbenannt zu raeumung-*/anfrage-kompakt/komplett/business
+- Social-Videos (reel-wien23*.mp4, generate_reel*.py, video-*.md/srt) stammen noch vom Auto-Business und sind Legacy – bei Bedarf neu für KCC erstellen
+- putzsachen-liste.md ist ebenfalls Legacy vom Reinigungskonzept
 
-### 4) Conversion-Optimierungen
-- Paketseiten wurden ausführlicher beschrieben
-- Paketanfrageformulare optimiert
-- Startseite wurde vereinfacht und auf Verkaufs- / Trust-Optik überarbeitet
-- Alte Social-Proof-Blöcke (Zahlen/Bewertungen) wurden entfernt und später durch minimalere, hochwertigere Startseiten-Abschnitte ersetzt
-- Hero-Text und CTA wurden mehrfach sales-orientiert überarbeitet
+## Technik-Hinweise
+- Deployment: Push auf main → Netlify baut automatisch
+- Live-Checks mit Cache-Buster (?cb=...) durchführen, Netlify liefert sonst evtl. alte Versionen
+- netlify.toml: statisches Hosting, Security-Header, kein SPA-Redirect
 
-### 5) Rechts-/Content-Korrekturen
-- Rechtschreibfehler korrigiert
-- Impressum und andere Seiten aufbereitet
-- Copy an verschiedenen Stellen verbessert
-
-## Live-Status
-- Site läuft erfolgreich auf Netlify
-- Wichtige Seiten wurden mehrfach verifiziert und als erreichbar bestätigt
-- FormSubmit wird als freie E-Mail-Lösung genutzt
-
-## Wichtige Hinweise
-- Der Site-Stand ist statisch; es gibt keine echte Backend-Logik, sondern nur HTML/CSS/JS plus FormSubmit-Formulare
-- Netlify-Cache kann bei Live-Checks ältere HTML-Versionen zeigen; daher bitte bei Live-Prüfungen Cache-Busting oder Hard Refresh verwenden
-- Wenn später echte E-Mail-Aktivitäten oder Tracking gebraucht werden, sind nächste Schritte:
-  - Live-Form-Testergebnisse prüfen
-  - UTM-/Source-Tracking ergänzen
-  - ggf. eigene Domain und DNS konfigurieren
-
-## Aktueller Fokus / nächste mögliche Schritte
-- Startseite weiter in Richtung Premium-Sales-Layout optimieren
-- Form-Tests mit echter E-Mail-Übertragung prüfen
-- UTM-Tracking für TikTok/Instagram ergänzen
-- Optional: eigener Domain-Setup
-
-## Wichtige Dateinamen
-- index.html
-- styles.css
-- script.js
-- kontakt.html
-- preise.html
-- leistungen.html
-- basic-clean.html
-- deep-fresh.html
-- fleet-pro.html
-- anfrage-basic-clean.html
-- anfrage-deep-fresh.html
-- anfrage-fleet-pro.html
-- generate_reel.py
-- generate_reel_variants.py
-- netlify.toml
-- danke.html
-- impressum.html
-- datenschutz.html
