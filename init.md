@@ -4,7 +4,7 @@
 - Business: Wohnungsräumungen & Haushaltsauflösungen (Hauptfokus), dazu Reinigung, Gartenpflege, Umzugshilfe, Fahrzeugpflege
 - Marke: KCC Premiumdienste (K = Kaiser, C = Clemens, C = Constantin)
 - Slogan: "Drei Freunde. Ein Team. Qualität."
-- Region: Wien & Niederösterreich
+- Region: Breitenfurt bei Wien und Umgebung (vorerst)
 - Telefon: +4367763267134
 - E-Mail: Fresh_interior@outlook.com (HINWEIS: für die Marke besser später z. B. kcc.premiumdienste@outlook.com anlegen und überall tauschen)
 - Website: statische Multi-Page-Website (HTML, CSS, JS)
