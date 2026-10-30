@@ -16,38 +16,17 @@ reveals.forEach((section) => observer.observe(section));
 
 const form = document.querySelector('.contact-form');
 if (form) {
-  const emailFallback = form.querySelector('.form-email-fallback');
   const serviceSelect = form.querySelector('[name="service"]');
   const requestedService = new URLSearchParams(window.location.search).get('service');
   if (serviceSelect && requestedService && [...serviceSelect.options].some((option) => option.value === requestedService)) {
     serviceSelect.value = requestedService;
   }
 
-  const updateEmailFallback = () => {
-    const formData = new FormData(form);
-    if (emailFallback) {
-      const body = [
-        `Name: ${formData.get('name') || ''}`,
-        `Gewünschte Leistung: ${serviceSelect ? serviceSelect.options[serviceSelect.selectedIndex].text : ''}`,
-        `E-Mail: ${formData.get('email') || ''}`,
-        `Telefon: ${formData.get('telefon') || ''}`,
-        `Einsatzort / Fahrzeugstandort: ${formData.get('adresse') || ''}`,
-        '',
-        formData.get('message') || '',
-      ].join('\n');
-      const recipient = new URL(form.action).pathname.slice(1);
-      emailFallback.href = `mailto:${recipient}?subject=${encodeURIComponent(formData.get('_subject') || 'Räumungsanfrage')}&body=${encodeURIComponent(body)}`;
-    }
-  };
-  form.addEventListener('input', updateEmailFallback);
-  form.addEventListener('change', updateEmailFallback);
   form.addEventListener('submit', async (event) => {
     event.preventDefault();
     const button = form.querySelector('button');
     const status = form.querySelector('.form-status');
     const formData = new FormData(form);
-    updateEmailFallback();
-
     if (button) {
       button.dataset.label = button.textContent;
       button.textContent = 'Wird gesendet...';
@@ -88,14 +67,11 @@ if (form) {
         status.textContent = 'Deine Anfrage wurde erfolgreich an den Formulardienst übermittelt.';
       }
       form.reset();
-      if (emailFallback) {
-        emailFallback.href = `mailto:${new URL(form.action).pathname.slice(1)}`;
-      }
     } catch (error) {
       console.error('Formularversand fehlgeschlagen:', error);
       if (status) {
         status.classList.add('error');
-        status.textContent = 'Deine Anfrage konnte nicht übermittelt werden. Der Formulardienst ist möglicherweise nicht erreichbar oder die Empfängeradresse noch nicht aktiviert. Deine Angaben bleiben erhalten. Bitte nutze den E-Mail-Link unter dem Formular oder rufe uns an.';
+        status.textContent = 'Deine Anfrage konnte nicht übermittelt werden. Bitte versuche es später erneut. Deine Angaben bleiben erhalten.';
       }
     } finally {
       if (button) {
