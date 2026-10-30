@@ -477,6 +477,12 @@ p {
   color: #111;
 }
 
+.home-car-care-schedule {
+  margin-top: 1.5rem;
+  color: #d2d2d7;
+  text-align: center;
+}
+
 .home-car-care-actions .btn-primary {
   background: #fff;
   color: #111;
