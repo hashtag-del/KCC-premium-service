@@ -497,13 +497,6 @@ p {
   color: #111;
 }
 
-.home-car-care-note {
-  margin-top: 1rem;
-  color: #d2d2d7;
-  text-align: center;
-  font-size: 0.9rem;
-}
-
 /* ---------- Process ---------- */
 
 .process ol {
@@ -597,14 +590,6 @@ p {
 .price-card .btn {
   align-self: flex-start;
   margin-top: 0.5rem;
-}
-
-.price-disclaimer {
-  max-width: 52rem;
-  margin: 1.5rem auto 0;
-  color: var(--muted);
-  text-align: center;
-  font-size: 0.95rem;
 }
 
 .featured {
