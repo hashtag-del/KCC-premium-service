@@ -16,6 +16,7 @@
 - Buttons durchgehend schwarz-weiß (auf dunklen Flächen weiß mit schwarzer Schrift)
 - Farben in styles.css: --bg #ffffff, --bg-alt #f5f5f7, --text #1d1d1f
 - Bilder: assets/images/hero-kcc.jpg, callout-kcc.jpg, leistungen-kcc.jpg
+- Hintergründe: dezente helle Verläufe, Foto-Banner auf Leistungen/Preise/Kontakt und im Preis-Callout; helle Foto-Überlagerungen in Kontaktbereichen. Rechtliche Texte bleiben auf ruhigen Flächen.
 
 ## Preis
 - Ein einziges Angebot: 29,99 € pro Stunde (ohne Zusatz "pro Person")

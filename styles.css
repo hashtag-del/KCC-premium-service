@@ -29,7 +29,9 @@ body {
 body {
   font-family: var(--font);
   color: var(--text);
-  background: var(--bg);
+  background:
+    radial-gradient(ellipse at 0% 0%, rgba(226, 218, 204, 0.4), transparent 38rem),
+    linear-gradient(180deg, var(--bg-alt), var(--bg) 65rem);
   line-height: 1.47;
   font-size: 17px;
   letter-spacing: -0.01em;
@@ -237,6 +239,27 @@ p {
   padding: 5rem 0 2.5rem;
 }
 
+.hero-backdrop {
+  margin-top: 2rem;
+  padding: clamp(3rem, 8vw, 6rem) clamp(1.25rem, 4vw, 3rem);
+  border-radius: var(--radius);
+  color: #fff;
+  background:
+    linear-gradient(110deg, rgba(0, 0, 0, 0.82), rgba(0, 0, 0, 0.65)),
+    url("assets/images/callout-kcc.jpg") center / cover;
+}
+
+.page-services .hero-backdrop {
+  background-image:
+    linear-gradient(110deg, rgba(0, 0, 0, 0.82), rgba(0, 0, 0, 0.65)),
+    url("assets/images/leistungen-kcc.jpg");
+}
+
+.hero-backdrop .eyebrow,
+.hero-backdrop .hero-copy {
+  color: #f5f5f7;
+}
+
 .hero-grid {
   display: flex;
   flex-direction: column;
@@ -291,6 +314,10 @@ p {
 .hero-visual {
   position: relative;
   width: 100%;
+  padding: 0.6rem;
+  border-radius: calc(var(--radius) + 10px);
+  background: linear-gradient(135deg, #fff, #e5dfd5);
+  box-shadow: 0 24px 70px rgba(40, 35, 25, 0.1);
 }
 
 .hero-photo {
@@ -549,6 +576,8 @@ p {
 }
 
 .home-price-callout {
+  position: relative;
+  isolation: isolate;
   display: grid;
   grid-template-columns: 1fr;
   gap: 2rem;
@@ -557,13 +586,24 @@ p {
   border-radius: var(--radius);
   overflow: hidden;
   text-align: center;
+  padding-top: 4rem;
 }
 
 .callout-photo {
+  position: absolute;
+  inset: 0;
+  z-index: -2;
   width: 100%;
-  height: 320px;
+  height: 100%;
   object-fit: cover;
-  opacity: 0.85;
+}
+
+.home-price-callout::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: linear-gradient(110deg, rgba(0, 0, 0, 0.86), rgba(0, 0, 0, 0.7));
 }
 
 .home-price-callout > div {
@@ -577,7 +617,7 @@ p {
 }
 
 .home-price-callout p {
-  color: #a1a1a6;
+  color: #f5f5f7;
   font-size: 1.15rem;
   max-width: 38rem;
   margin-inline: auto;
@@ -604,7 +644,9 @@ p {
 
 .cta {
   text-align: center;
-  background: var(--bg-alt);
+  background:
+    linear-gradient(110deg, rgba(255, 255, 255, 0.97), rgba(255, 255, 255, 0.91)),
+    url("assets/images/hero-kcc.jpg") center / cover;
   border-radius: var(--radius);
   padding: 4.5rem 2rem;
   margin-block: 2rem;
@@ -788,9 +830,6 @@ select:focus {
     padding: 3rem 0;
   }
 
-  .callout-photo {
-    height: 200px;
-  }
 }
 
 @media (prefers-reduced-motion: reduce) {
