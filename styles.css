@@ -901,6 +901,19 @@ select:focus {
   margin: 0.4rem 0;
 }
 
+.agb-details > summary {
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.agb-details[open] > summary {
+  margin-bottom: 1.2rem;
+}
+
+.agb-text h2:first-child {
+  margin-top: 0;
+}
+
 /* ---------- Animations ---------- */
 
 .reveal {
