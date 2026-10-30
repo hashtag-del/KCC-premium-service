@@ -6,7 +6,7 @@
 - Slogan: "Drei Freunde. Ein Team. Qualität."
 - Region: Breitenfurt bei Wien und Umgebung (vorerst)
 - Telefon: +4367763267134
-- E-Mail: Fresh_interior@outlook.com (HINWEIS: für die Marke besser später z. B. kcc.premiumdienste@outlook.com anlegen und überall tauschen)
+- E-Mail: KCC.premium.service@outlook.com
 - Website: statische Multi-Page-Website (HTML, CSS, JS)
 - Live: https://kccpremiumservice.netlify.app/
 - Repo: https://github.com/hashtag-del/fresh-interior
@@ -30,7 +30,7 @@
 - impressum.html / datenschutz.html
 
 ## Formulare / E-Mail
-- FormSubmit (kostenlos): https://formsubmit.co/Fresh_interior@outlook.com
+- FormSubmit (kostenlos): https://formsubmit.co/KCC.premium.service@outlook.com
 - WICHTIG: Nach erstem Test die FormSubmit-Aktivierungs-Mail bestätigen, sonst kommen keine Mails an
 - Pflichtfelder: Name, Telefon, Adresse, Details, DSGVO-Checkbox (E-Mail ist optional)
 
