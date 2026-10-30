@@ -914,6 +914,57 @@ select:focus {
   margin-top: 0;
 }
 
+.page-agb .sub-hero {
+  padding: 2rem 0 1rem;
+}
+
+.page-agb .sub-hero h1 {
+  font-size: clamp(1.8rem, 4vw, 2.6rem);
+}
+
+.page-agb .sub-hero .hero-copy {
+  margin-top: 0.5rem;
+}
+
+.page-agb .section {
+  padding: 0.75rem 0;
+}
+
+.page-agb .contact-form {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 1rem 1.25rem;
+  gap: 0.5rem 1rem;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: center;
+}
+
+.page-agb .contact-form .consent-row,
+.page-agb .contact-form > p:not(.form-status) {
+  grid-column: 1;
+}
+
+.page-agb .contact-form > p:not(.form-status) {
+  font-size: 0.8rem;
+}
+
+.page-agb .contact-form .btn {
+  grid-column: 2;
+  grid-row: 1 / span 2;
+  margin: 0;
+  font-size: 0.9rem;
+}
+
+.page-agb .contact-form .form-status {
+  grid-column: 1 / -1;
+}
+
+.page-agb .site-footer {
+  margin-top: 1rem;
+  padding-top: 1rem;
+  padding-bottom: 1.25rem;
+}
+
 /* ---------- Animations ---------- */
 
 .reveal {
@@ -975,6 +1026,20 @@ select:focus {
 
   .section {
     padding: 3rem 0;
+  }
+
+  .page-agb .section {
+    padding: 0.5rem 0;
+  }
+
+  .page-agb .contact-form {
+    grid-template-columns: 1fr;
+  }
+
+  .page-agb .contact-form .btn {
+    grid-column: 1;
+    grid-row: auto;
+    justify-self: start;
   }
 
 }
