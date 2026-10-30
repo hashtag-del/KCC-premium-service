@@ -16,10 +16,29 @@ reveals.forEach((section) => observer.observe(section));
 
 const form = document.querySelector('.contact-form');
 if (form) {
+  const emailFallback = form.querySelector('.form-email-fallback');
+  const updateEmailFallback = () => {
+    const formData = new FormData(form);
+    if (emailFallback) {
+      const body = [
+        `Name: ${formData.get('name') || ''}`,
+        `E-Mail: ${formData.get('email') || ''}`,
+        `Telefon: ${formData.get('telefon') || ''}`,
+        `Adresse: ${formData.get('adresse') || ''}`,
+        '',
+        formData.get('message') || '',
+      ].join('\n');
+      const recipient = new URL(form.action).pathname.slice(1);
+      emailFallback.href = `mailto:${recipient}?subject=${encodeURIComponent(formData.get('_subject') || 'Räumungsanfrage')}&body=${encodeURIComponent(body)}`;
+    }
+  };
+  form.addEventListener('input', updateEmailFallback);
   form.addEventListener('submit', async (event) => {
     event.preventDefault();
     const button = form.querySelector('button');
     const status = form.querySelector('.form-status');
+    const formData = new FormData(form);
+    updateEmailFallback();
 
     if (button) {
       button.dataset.label = button.textContent;
@@ -37,10 +56,11 @@ if (form) {
       const target = action.replace('formsubmit.co/', 'formsubmit.co/ajax/');
       const response = await fetch(target, {
         method: 'POST',
-        body: new FormData(form),
+        body: formData,
         headers: {
           Accept: 'application/json',
         },
+        signal: AbortSignal.timeout(20000),
       });
 
       if (!response.ok) {
@@ -48,22 +68,26 @@ if (form) {
       }
 
       const data = await response.json();
-      const message = data.message || '';
-      const activationHint = 'Bitte pruefe dein Postfach und bestaetige einmal FormSubmit.';
+      const message = typeof data.message === 'string' ? data.message : '';
+      if (data.success !== true && data.success !== 'true') {
+        throw new Error(message || 'Der Formulardienst hat den Versand nicht bestätigt.');
+      }
+      if (/activat/i.test(message)) {
+        throw new Error('Die Empfängeradresse muss bei FormSubmit noch aktiviert werden.');
+      }
       if (status) {
         status.classList.add('success');
-        status.textContent = message ? `Erfolgreich gesendet. ${message}` : 'Erfolgreich gesendet.';
-        if (message.toLowerCase().includes('activate')) {
-          status.textContent = activationHint;
-          status.classList.remove('success');
-          status.classList.add('error');
-        }
+        status.textContent = 'Deine Anfrage wurde erfolgreich an den Formulardienst übermittelt.';
       }
       form.reset();
+      if (emailFallback) {
+        emailFallback.href = `mailto:${new URL(form.action).pathname.slice(1)}`;
+      }
     } catch (error) {
+      console.error('Formularversand fehlgeschlagen:', error);
       if (status) {
         status.classList.add('error');
-        status.textContent = 'Senden fehlgeschlagen. Bitte Internetverbindung pruefen oder spaeter erneut versuchen.';
+        status.textContent = 'Deine Anfrage konnte nicht übermittelt werden. Der Formulardienst ist möglicherweise nicht erreichbar oder die Empfängeradresse noch nicht aktiviert. Deine Angaben bleiben erhalten. Bitte nutze den E-Mail-Link unter dem Formular oder rufe uns an.';
       }
     } finally {
       if (button) {

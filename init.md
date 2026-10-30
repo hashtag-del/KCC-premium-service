@@ -32,6 +32,7 @@
 ## Formulare / E-Mail
 - FormSubmit (kostenlos): https://formsubmit.co/KCC.premium.service@outlook.com
 - WICHTIG: Nach erstem Test die FormSubmit-Aktivierungs-Mail bestätigen, sonst kommen keine Mails an
+- Bei Versandfehlern bleiben Eingaben erhalten. Der E-Mail-Link unter dem Formular übernimmt die Angaben beim Absendeversuch ins lokale E-Mail-Programm; dort muss die E-Mail noch abgesendet werden.
 - Pflichtfelder: Name, Telefon, Adresse, Details, DSGVO-Checkbox (E-Mail ist optional)
 
 ## Technik-Hinweise
