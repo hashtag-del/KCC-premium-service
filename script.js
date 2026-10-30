@@ -40,6 +40,7 @@ if (form) {
     }
   };
   form.addEventListener('input', updateEmailFallback);
+  form.addEventListener('change', updateEmailFallback);
   form.addEventListener('submit', async (event) => {
     event.preventDefault();
     const button = form.querySelector('button');
