@@ -432,6 +432,78 @@ p {
   color: var(--muted);
 }
 
+.home-car-care-panel {
+  padding: clamp(1.5rem, 5vw, 3.5rem);
+  border-radius: var(--radius);
+  background: #111;
+  color: #fff;
+}
+
+.home-car-care .section-head {
+  margin-bottom: 2rem;
+}
+
+.home-car-care .section-head .eyebrow,
+.home-car-care .section-head > p:last-child {
+  color: #d2d2d7;
+}
+
+.home-car-care .section-head h2 {
+  color: #fff;
+}
+
+.home-car-care-panel .card {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.home-car-care-panel .card h3 {
+  color: #fff;
+}
+
+.home-car-care-panel .card p {
+  color: #d2d2d7;
+}
+
+.home-car-care-panel .card .home-car-care-price {
+  color: #fff;
+  font-size: 1.8rem;
+  font-weight: 700;
+  letter-spacing: -0.04em;
+}
+
+.home-car-care-panel .card .badge {
+  align-self: flex-start;
+  background: #fff;
+  color: #111;
+}
+
+.home-car-care-actions .btn-primary {
+  background: #fff;
+  color: #111;
+}
+
+.home-car-care-actions .btn-primary:hover {
+  background: #d2d2d7;
+}
+
+.home-car-care-actions .btn-ghost {
+  background: transparent;
+  color: #fff;
+  border-color: rgba(255, 255, 255, 0.65);
+}
+
+.home-car-care-actions .btn-ghost:hover {
+  background: #fff;
+  color: #111;
+}
+
+.home-car-care-note {
+  margin-top: 1rem;
+  color: #d2d2d7;
+  text-align: center;
+  font-size: 0.9rem;
+}
+
 /* ---------- Process ---------- */
 
 .process ol {
