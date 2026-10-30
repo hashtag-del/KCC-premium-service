@@ -6,7 +6,7 @@
     <title>KCC Premiumdienste | Kontakt</title>
     <meta
       name="description"
-      content="Kontakt und Anfrage für Wohnungsräumungen mit KCC Premiumdienste. Kostenlose Besichtigung in Breitenfurt bei Wien und Umgebung vereinbaren."
+      content="Kontakt und Anfrage für Wohnungsräumungen und Auto-Innenraumreinigung mit KCC Premiumdienste in Breitenfurt bei Wien und Umgebung."
     />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -47,10 +47,10 @@
     <main>
       <section class="hero sub-hero hero-backdrop container reveal">
         <p class="eyebrow">Kontakt</p>
-        <h1>Kostenlose Besichtigung für deine Räumung anfragen</h1>
+        <h1>Anfrage an KCC Premiumdienste senden</h1>
         <p class="hero-copy">
-          Schreibt uns kurz Adresse, Wohnungsgröße und Zeitraum. Wir melden uns
-          schnell mit einem passenden Besichtigungstermin.
+          Schreibt uns, ob es um eine Räumung, Fahrzeug-Innenreinigung oder einen anderen Premiumdienst geht.
+          Wir melden uns schnell mit Details und passenden Terminmöglichkeiten.
         </p>
       </section>
 
@@ -58,18 +58,28 @@
         <div>
           <p class="eyebrow">Direkt erreichbar</p>
           <h2>KCC Premiumdienste Team</h2>
-          <p>Di, Mi, Fr: 16:00-21:00 Uhr | Wochenende: 10:00-21:00 Uhr</p>
+          <p>Für Besichtigungen und Termine: Di, Mi, Fr: 16:00-21:00 Uhr | Wochenende: 10:00-21:00 Uhr</p>
           <p>Tel: +4367763267134</p>
           <p>E-Mail: <a href="mailto:KCC.premium.service@outlook.com">KCC.premium.service@outlook.com</a></p>
         </div>
         <form class="contact-form" action="https://formsubmit.co/KCC.premium.service@outlook.com" method="POST">
-          <input type="hidden" name="_subject" value="Neue Räumungsanfrage über die Website" />
+          <input type="hidden" name="_subject" value="Neue Anfrage über die KCC-Website" />
           <input type="hidden" name="_captcha" value="false" />
           <input type="hidden" name="_next" value="https://kccpremiumservice.netlify.app/danke.html" />
           <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off" />
           <label>
             Name
             <input type="text" name="name" placeholder="Max Mustermann" minlength="2" required />
+          </label>
+          <label>
+            Gewünschte Leistung
+            <select name="service" required>
+              <option value="raeumung">Wohnungsräumung / Haushaltsauflösung</option>
+              <option value="basic-clean">Basic Clean – Auto-Innenraum (69 €)</option>
+              <option value="deep-fresh">Deep Fresh – Auto-Innenraum (129 €)</option>
+              <option value="fleet-pro">Fleet Pro – Firmenfahrzeuge</option>
+              <option value="sonstiger-dienst">Sonstiger KCC-Premiumdienst</option>
+            </select>
           </label>
           <label>
             E-Mail (optional)
@@ -86,15 +96,15 @@
             />
           </label>
           <label>
-            Adresse der Wohnung
-            <input type="text" name="adresse" placeholder="z. B. Hauptstraße 12, 2384 Breitenfurt" required />
+            Einsatzort / Fahrzeugstandort
+            <input type="text" name="adresse" placeholder="z. B. 2384 Breitenfurt oder Abholadresse" required />
           </label>
           <label>
-            Wohnung &amp; Zeitraum
+            Details zu deinem Auftrag
             <textarea
               name="message"
               rows="4"
-              placeholder="z. B. 2-Zimmer-Wohnung, ca. 55 m², 3. Stock mit Lift, Auszug bis Ende des Monats"
+              placeholder="Beschreibe kurz dein Anliegen, z. B. Wohnungsgröße und Zeitraum oder Fahrzeugmodell und gewünschtes Paket."
               minlength="20"
               required
             ></textarea>
@@ -103,7 +113,7 @@
             <input type="checkbox" name="datenschutz" required />
             Ich stimme der Verarbeitung meiner Daten zur Bearbeitung der Anfrage zu.
           </label>
-          <button type="submit" class="btn btn-primary">Auswählen</button>
+          <button type="submit" class="btn btn-primary">Anfrage senden</button>
           <p class="form-status" aria-live="polite"></p>
           <p>
             Alternativ: <a class="form-email-fallback" href="mailto:KCC.premium.service@outlook.com">Anfrage im E-Mail-Programm öffnen</a>.
@@ -114,7 +124,7 @@
     </main>
 
     <footer class="site-footer container">
-      <p>KCC Premiumdienste | Räumungen in Breitenfurt bei Wien | Di, Mi, Fr 16:00-21:00 Uhr | Wochenende 10:00-21:00 Uhr</p>
+      <p>KCC Premiumdienste | Räumungen &amp; Fahrzeugpflege in Breitenfurt bei Wien | Di, Mi, Fr 16:00-21:00 Uhr | Wochenende 10:00-21:00 Uhr</p>
       <p>Tel: +4367763267134 | E-Mail: KCC.premium.service@outlook.com</p>
       <p class="legal-links"><a href="impressum.html">Impressum</a> | <a href="datenschutz.html">Datenschutz</a></p>
     </footer>

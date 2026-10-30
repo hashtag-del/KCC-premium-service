@@ -17,14 +17,21 @@ reveals.forEach((section) => observer.observe(section));
 const form = document.querySelector('.contact-form');
 if (form) {
   const emailFallback = form.querySelector('.form-email-fallback');
+  const serviceSelect = form.querySelector('[name="service"]');
+  const requestedService = new URLSearchParams(window.location.search).get('service');
+  if (serviceSelect && requestedService && [...serviceSelect.options].some((option) => option.value === requestedService)) {
+    serviceSelect.value = requestedService;
+  }
+
   const updateEmailFallback = () => {
     const formData = new FormData(form);
     if (emailFallback) {
       const body = [
         `Name: ${formData.get('name') || ''}`,
+        `Gewünschte Leistung: ${serviceSelect ? serviceSelect.options[serviceSelect.selectedIndex].text : ''}`,
         `E-Mail: ${formData.get('email') || ''}`,
         `Telefon: ${formData.get('telefon') || ''}`,
-        `Adresse: ${formData.get('adresse') || ''}`,
+        `Einsatzort / Fahrzeugstandort: ${formData.get('adresse') || ''}`,
         '',
         formData.get('message') || '',
       ].join('\n');
