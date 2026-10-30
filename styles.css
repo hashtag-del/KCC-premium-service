@@ -472,6 +472,14 @@ p {
   transition: transform 250ms ease, box-shadow 250ms ease;
 }
 
+.service-choice-image {
+  width: 100%;
+  aspect-ratio: 16 / 7;
+  margin-bottom: 1.5rem;
+  border-radius: 18px;
+  object-fit: cover;
+}
+
 .service-choice:hover {
   transform: translateY(-4px);
   box-shadow: 0 24px 60px rgba(35, 30, 20, 0.13);
